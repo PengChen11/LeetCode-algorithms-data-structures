@@ -10,7 +10,7 @@ You can also extend this idea to use multiple pointers.
 
 - [2. Challenge 2, Sum of Square Numbers](#Challenge-2)
 
-- [3. Challenge 3](#Challenge-3)
+- [3. Challenge 3, Reverse Vowels of a String](#Challenge-3)
 
 ___
 
@@ -48,7 +48,7 @@ Try come up with a solution before see my sample solution. And test it with the 
 ___
 
 <details>
-  <summary>Click here to see two pointers solution.</summary>
+  <summary>Click here to see a solution using pointers.</summary>
 
   1. We use two pointers, one pointing to a smaller number; one pointing to a bigger number.
      - The smaller number pointer travels from small number to big( head to toe).
@@ -79,7 +79,7 @@ ___
 
 **Intro:**
 
-Given a non-negative integer c, your task is to decide whether there're two integers a and b such that **a^2 + b^2 = c**.
+Given a non-negative integer **c**, your task is to decide whether there're two integers **a** and **b** such that **a^2 + b^2 = c**.
 
 **Example 1:**
 
@@ -110,7 +110,7 @@ Try come up with a solution before see my sample solution. And test it with the 
 ___
 
 <details>
-  <summary>Click here to see two pointers solution.</summary>
+  <summary>Click here to see a solution using pointers.</summary>
 
   We can think about this challenge in this way:
 
@@ -138,3 +138,64 @@ ___
 ___
 
 ## Challenge 3
+
+### LeetCode 345. Reverse Vowels of a String (Easy)
+
+**Intro:**
+
+Write a function that takes a string as input and reverse only the vowels of a string.
+
+**Example 1:**
+
+- Input: "hello"
+- Output: "holle"
+
+**Example 2:**
+
+- Input: "leetcode"
+- Output: "leotcede"
+
+**Note:** The vowels does not include the letter "y".
+
+Hint:
+
+1. can we modify char in a string directly?
+2. if we can not, what should we do?
+
+**Tester:**
+
+Try come up with a solution before see my sample solution. And test it with the provided tester.
+
+[Click here to see JS tester](3_reverse_vowels/reverse_vowels.test.js)
+
+<details>
+  <summary>Click here to see a solution using pointers.</summary>
+
+  ![img](https://camo.githubusercontent.com/29a0f67b26e9f62af80508fdc8ecc9fa2e53f5dd/68747470733a2f2f63732d6e6f7465732d313235363130393739362e636f732e61702d6775616e677a686f752e6d7971636c6f75642e636f6d2f61376362383432332d383935642d343937352d386566382d3636326130303239633737322e706e67)
+
+   In Javascript, string is immutable. That means no matter what string method you are using, behind the scenes, it's converting a string to an array then play with it, output a joined array as the new string.
+
+   In order to determine whether a character is a vowel or not, a hash table would be the best, since searching inside only takes O(1) time.
+
+   1. build up your vowels table.
+   2. split the input string into an array.
+   3. set head pointer and tail pointer.
+   4. check the head pointer,
+         - if it's a vowel, then check the tail pointer. if it's a vowel, switch them.
+         - if the tail pointer is not a vowel, move it back one step.
+         - if it's not a vowel, move forward one step.
+   5. at the end, joint the letters array and output it.
+
+  Big O time is n, just need to check all of it's letters one time.
+  Big O space is 1, we 're justing using two ponters.
+
+  ![img](https://camo.githubusercontent.com/6e66ca91f2688beacd6f9dd3ef2774abb53dda73/68747470733a2f2f63732d6e6f7465732d313235363130393739362e636f732e61702d6775616e677a686f752e6d7971636c6f75642e636f6d2f65663235666637632d306636332d343230642d386233302d6561666265656133356431312e676966)
+</details>
+
+___
+
+[Click here to see the code in JS](3_reverse_vowels/reverse_vowels.js)
+
+[Click here to see the code in Python](3_reverse_vowels/reverse_vowels.py)
+
+___
