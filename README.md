@@ -1,4 +1,4 @@
-# LeetCode algorithms and data structures collections
+# LeetCode Algorithms and Data Structures challenge Collections
 
 One thing I've learned as a newcomer to the programmer's world is that, if you really want to be a great software engineer, a solid understanding of different algorithms and data structures is a must. Thus LeetCode **medium to hard** level code challenge is sometime required by employers.
 
@@ -18,13 +18,14 @@ Now, let's get started with me, solve the challenge, and grow this repo.
 
 My solution won't be the best solution, so if you have a better idea, please reach out to me.
 
-**Note: Do not rush to submit your solution to LeetCode and see whether it works or not. If it doesn't, it count against your over all submit/passing ratio.**
+**Note: Do not rush to submit your solution to LeetCode, just to test out whether it works or not. If it doesn't, it count against your over all submit/passing ratio. Is it bad? I don't know. But I don't like to see my raito being lowered.**
 
 ___
 
 ## Algorithms
 
 1. [Two pointers](algorithms/1_two_pointers/1_two_pointers.md)
+    - This collection has 7 challenges.
 
 ___
 

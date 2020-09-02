@@ -6,11 +6,11 @@ You can also extend this idea to use multiple pointers.
 
 [Click here to read more about two pointers](https://medium.com/@kevinlai76/algorithm-two-pointer-technique-a27103ed7ea1)
 
-[1. Challenge 1](##_Challenge_1)
+* [1. Challenge 1](##-Challenge-1)
 
-[2. Challenge 2](##_Challenge_2)
+* [2. Challenge 2](##-Challenge-2)
 
-[3. Challenge 3](##_Challenge_3)
+* [3. Challenge 3](##_Challenge_3)
 
 ___
 
@@ -65,7 +65,7 @@ ___
 <details>
 
   <summary>Click to see code in JS</summary>
-  
+
   ```javascript
     var twoSum = function(numbers, target) {
       let pointer_small = 0;
@@ -91,3 +91,37 @@ ___
 ## Challenge 2
 
 ### LeetCode 633. Sum of Square Numbers [Easy]
+
+**Intro:**
+
+Given a non-negative integer c, your task is to decide whether there're two integers a and b such that **a^2 + b^2 = c**.
+
+**Example 1:**
+
+Input: 5
+
+Output: True
+
+Explanation: ```1*1 + 2*2 = 5```
+
+**Example 2:**
+
+Input: 3
+
+Output: False
+
+Explanation: the solution does not exsit.
+
+This one is a bit of challenging here, but it is still rated as Esay at LeetCode.
+
+Hint: two pointers could represent a and b here.
+
+**Tester:**
+
+Try come up with a solution before see my sample solution. And test it with the provided tester.
+
+[Click here to see JS tester](2_sum_square_numbers/sum_square.test.js)
+
+<details>
+  <summary>Click here to see two pointers solution.</summary>
+
