@@ -6,11 +6,11 @@ You can also extend this idea to use multiple pointers.
 
 [Click here to read more about two pointers](https://medium.com/@kevinlai76/algorithm-two-pointer-technique-a27103ed7ea1)
 
-* [1. Challenge 1](##-Challenge-1)
+* [1. Challenge 1](##Challenge-1)
 
-* [2. Challenge 2](##-Challenge-2)
+* [2. Challenge 2](##Challenge-2)
 
-* [3. Challenge 3](##_Challenge_3)
+* [3. Challenge 3](##Challenge-3)
 
 ___
 
@@ -125,3 +125,4 @@ Try come up with a solution before see my sample solution. And test it with the 
 <details>
   <summary>Click here to see two pointers solution.</summary>
 
+## Challenge 3
