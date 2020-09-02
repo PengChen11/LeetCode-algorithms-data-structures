@@ -1,0 +1,27 @@
+{
+  "name": "LeetCode-algorithms-data-structures",
+  "version": "1.0.0",
+  "description": "One thing I've learned as a newcomer to the programmer's world is that, if you really want to be a great software engineer, a solid understanding of different algorithms and data structures is a must. Thus LeetCode medium to hard level code challenge is sometime required by employers.",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest --verbose --coverage",
+    "test-watch": "jest --watchAll --verbose --coverage"
+  },
+  "jest": {
+    "testEnvironment": "node"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/PengChen11/LeetCode-algorithms-data-structures.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/PengChen11/LeetCode-algorithms-data-structures/issues"
+  },
+  "homepage": "https://github.com/PengChen11/LeetCode-algorithms-data-structures#readme",
+  "devDependencies": {
+    "jest": "^26.4.2"
+  }
+}
