@@ -24,7 +24,7 @@ ___
 
 ## Algorithms
 
-1. [Two pointers](algorithms/1_two_pointers/1_two_pointers.md)
+1. [Two Pointers Technique](algorithms/1_two_pointers/1_two_pointers.md)
     - This collection has 7 challenges.
 
 ___
