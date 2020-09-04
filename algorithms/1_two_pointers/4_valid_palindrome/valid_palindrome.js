@@ -6,7 +6,7 @@ function validPalindrome2(inputStr){
   let tail = inputStr.length-1;
   let removedOne = false;
 
-  while (head <= tail){
+  while (head < tail){
     if (inputStr[head]===inputStr[tail]) {
       head += 1;
       tail -= 1;
@@ -53,7 +53,7 @@ function validPalindrome(inputStr){
   return true;
 }
 
-module.exports = validPalindrome;
+module.exports = validPalindrome2;
 
 
 // here's my new way of solving this problem without using function inside of a function, but a nested while loop.

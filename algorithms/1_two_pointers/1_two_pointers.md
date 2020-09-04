@@ -6,13 +6,19 @@ You can also extend this idea to use multiple pointers.
 
 [Click here to read more about two pointers](https://medium.com/@kevinlai76/algorithm-two-pointer-technique-a27103ed7ea1)
 
-- [1. Challenge 1, Two Sum](#Challenge-1)
+**Resolved:**
 
-- [2. Challenge 2, Sum of Square Numbers](#Challenge-2)
+- [Challenge 1, Two Sum](#Challenge-1)
 
-- [3. Challenge 3, Reverse Vowels of a String](#Challenge-3)
+- [Challenge 2, Sum of Square Numbers](#Challenge-2)
 
-- [4. Challenge 4, Valid Palindrome II](#Challenge-4)
+- [Challenge 3, Reverse Vowels of a String](#Challenge-3)
+
+- [Challenge 4, Valid Palindrome II](#Challenge-4)
+
+**Today's challenge:**
+
+- [Challenge 5, Merge Sorted Array](#Challenge-5)
 
 ___
 
@@ -236,3 +242,83 @@ Try come up with a solution before see my sample solution. And test it with the 
 
 <details>
   <summary>Click here to see solutions using two pointers.</summary>
+
+  Here I have 3 solutions, the 1st one is my own initial solution, it's not the best one:
+
+  let's assume the input is  ```a b c d e d c d b a```
+
+  1. We need two trackers for the head and tail of the given string. Also a switch representing whether a letter is being removed or not.
+
+  2. Head moves to the right, tail moves to the left, and head needs to be smaller than tail all the time.
+
+  3. While when the head is smaller than the tail, we check whether the letter they are pointing to is the same. If so, we move forward. In the end, get out of the while loop, we return 'true'.
+
+  4. if not, things get tricky:
+
+        - if the switch is on, then it means we already got rid of one letter and it still doesn't work. Return False;
+
+        - otherwise, if the head + 1 is tail, then it means we are meeting in the middle, and we can easily get rid of one of those two letters to make it a palindrome.
+
+        - Or, we will get rid of one letter from the left part, check it's next letter with the tail tracker, AND, one more important thing, we also need to check one more pair to make sure we removed one from the left to make it work for now, but we're still heading to the right direction. If the additional check passes, great. Turn the switch on and more forward. if fails:
+
+        - Now we jump back, remove one letter from the right side and see whether it works now. If it does, great, we now removed the letter that could be removed. Turn the switch on then more forward.
+
+  **Then I saw CSC2018's solution and it blows my mind:**
+
+  Here's his way of solving it:
+
+  1. Simply start a for loop with two iterators, i and j, i moves to the right and j moves to the left, and only loop when i < j.
+
+  2. check every string[i] and string[j] pair, if mismatch occurs:
+
+        - make another function which returns a boolean, check whether the given string is a palindrome, by passing the input string, current i and j.
+
+        - return that boolean by calling the function with (i+1, j) or (i, j-1), which when cutting a letter from left doesn't work, we cut it from the right side.
+
+  3. simple and much more readable, right?
+
+  ![img](https://camo.githubusercontent.com/c91fb74b92cb6c308ed1660da771d2ff4cea4956/68747470733a2f2f63732d6e6f7465732d313235363130393739362e636f732e61702d6775616e677a686f752e6d7971636c6f75642e636f6d2f64623566333061372d386266612d346563632d616235642d3734376337373831383936342e676966)
+
+  If you don't like a for loop with two iterators, then you can use nested while loops. you can find a nested while loop solution in my code too.
+
+  But in the end, the performance of all those different approaches are similar. O time is O(n), O space is O(1) since we're only using two pointers.
+
+</details>
+
+___
+
+[Click here to see the solution in JS](4_valid_palindrome/valid_palindrome.js)
+
+[Click here to see the solution in Python](4_valid_palindrome/valid_palindrome.py)
+
+___
+
+## Challenge 5
+
+### LeetCode challenge 88, Merge Sorted Array (easy)
+
+**intro:**
+
+Given two sorted integer arrays nums1 and nums2, merge nums2 into nums1 as one sorted array.
+
+**Note:**
+
+The number of elements initialized in nums1 and nums2 are m and n respectively.
+You may assume that nums1 has enough space (size that is equal to m + n) to hold additional elements from nums2.
+Example:
+
+**Input:**
+
+- nums1 = [1,2,3,0,0,0], m = 3
+
+- nums2 = [2,5,6],       n = 3
+
+= Output: [1,2,2,3,5,6]
+
+**Constraints:**
+
+-10^9 <= nums1[i], nums2[i] <= 10^9
+
+nums1.length == m + n
+
+nums2.length == n

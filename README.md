@@ -1,5 +1,13 @@
 # LeetCode Algorithms and Data Structures challenge Collections
 
+**update:**
+
+Most recent solutions: [Algorithms catagorize 1, challenge 4.](algorithms/1_two_pointers/1_two_pointers.md)
+
+Today's challenges: [Algorithms catagorize 1, challenge 5.](algorithms/1_two_pointers/1_two_pointers.md)
+
+---
+
 One thing I've learned as a newcomer to the programmer's world is that, if you really want to be a great software engineer, a solid understanding of different algorithms and data structures is a must. Thus LeetCode **medium to hard** level code challenge is sometime required by employers.
 
 But, there're over 1500 challenges on LeetCode, where should I get start with? what should I focus on?
@@ -25,7 +33,7 @@ ___
 ## Algorithms
 
 1. [Two Pointers Technique](algorithms/1_two_pointers/1_two_pointers.md)
-    - This collection has 7 challenges.
+    - This collection will have 7 challenges.
 
 ___
 
