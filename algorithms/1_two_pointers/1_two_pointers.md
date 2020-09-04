@@ -225,8 +225,14 @@ Given a non-empty string s, you may delete at most one character. Judge whether 
 
 The string will only contain lowercase characters a-z. The maximum length of the string is 50000.
 
+**Hint:**
+remove one charactor from the left part vs right part might be tricky.
+
 **Tester:**
 
 Try come up with a solution before see my sample solution. And test it with the provided tester.
 
 [Click here to see JS tester](3_reverse_vowels/reverse_vowels.test.js)
+
+<details>
+  <summary>Click here to see solutions using two pointers.</summary>

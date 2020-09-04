@@ -33,7 +33,7 @@ print('All tests for method 1 passed')
 
 def valid_Palindrome_2(inputStr):
     head = 0
-    tail = len(inputStr-1)
+    tail = len(inputStr)-1
 
     while head < tail:
         if inputStr[head] != inputStr[tail]:
