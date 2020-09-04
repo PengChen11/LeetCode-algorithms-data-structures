@@ -1,6 +1,7 @@
 def valid_Palindrome(inputStr):
 
     def isPalindrome(inputStr, head, tail):
+        '''inside function testing a string to be a palindrome or not'''
         while head < tail:
             if inputStr[head] != inputStr[tail]:
                 return False;
@@ -8,10 +9,10 @@ def valid_Palindrome(inputStr):
             tail = tail - 1
         return True;
 
-
+    #nested loop with two indicators i and j, i getting bigger and j getting smaller.
     for i,j in zip(range(len(inputStr)-1), range(len(inputStr)-1, -1, -1)):
         if i>=j:
-            break;
+            break
         if inputStr[i] != inputStr[j]:
             return isPalindrome(inputStr, i+1, j) or isPalindrome(inputStr, i, j-1)
 
