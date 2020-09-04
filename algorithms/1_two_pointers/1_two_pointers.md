@@ -12,6 +12,8 @@ You can also extend this idea to use multiple pointers.
 
 - [3. Challenge 3, Reverse Vowels of a String](#Challenge-3)
 
+- [4. Challenge 4, Valid Palindrome II](#Challenge-4)
+
 ___
 
 ## Challenge 1
@@ -199,3 +201,32 @@ ___
 [Click here to see the code in Python](3_reverse_vowels/reverse_vowels.py)
 
 ___
+
+## Challenge 4
+
+### LeetCode 680. Valid Palindrome II (Easy)
+
+**Intro:**
+
+Given a non-empty string s, you may delete at most one character. Judge whether you can make it a palindrome.
+
+**Example 1:**
+
+- Input: "aba"
+- Output: True
+
+**Example 2:**
+
+- Input: "abca"
+- Output: True
+- Explanation: You could delete the character 'c'.
+
+**Note:**
+
+The string will only contain lowercase characters a-z. The maximum length of the string is 50000.
+
+**Tester:**
+
+Try come up with a solution before see my sample solution. And test it with the provided tester.
+
+[Click here to see JS tester](3_reverse_vowels/reverse_vowels.test.js)
