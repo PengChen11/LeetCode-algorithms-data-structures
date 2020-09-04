@@ -173,9 +173,9 @@ Try come up with a solution before see my sample solution. And test it with the 
 
   ![img](https://camo.githubusercontent.com/29a0f67b26e9f62af80508fdc8ecc9fa2e53f5dd/68747470733a2f2f63732d6e6f7465732d313235363130393739362e636f732e61702d6775616e677a686f752e6d7971636c6f75642e636f6d2f61376362383432332d383935642d343937352d386566382d3636326130303239633737322e706e67)
 
-   In Javascript, string is immutable. That means no matter what string method you are using, behind the scenes, it's converting a string to an array then play with it, output a joined array as the new string.
+   In Javascript and python, string is immutable. That means no matter what string method you are using, behind the scenes, it's converting a string to an array of charactors then play with it, output the new string by joining the array charactors all together.
 
-   In order to determine whether a character is a vowel or not, a hash table would be the best, since searching inside only takes O(1) time.
+   In order to determine whether a character is a vowel or not, building a hash table (hash map) would be the best practice, since searching inside of a hash table only takes O(1) time.
 
    1. build up your vowels table.
    2. split the input string into an array.
