@@ -2,9 +2,9 @@
 
 **update:**
 
-Most recent solutions: [Algorithms catagorize 1, challenge 4.](algorithms/1_two_pointers/1_two_pointers.md)
+Most recent solutions: [Algorithms catagorize 1, challenge 6.](algorithms/1_two_pointers/1_two_pointers.md)
 
-Today's challenges: [Algorithms catagorize 1, challenge 5.](algorithms/1_two_pointers/1_two_pointers.md)
+Today's challenges: [Algorithms catagorize 1, challenge 7.](algorithms/1_two_pointers/1_two_pointers.md)
 
 ---
 
@@ -28,13 +28,13 @@ My solution won't be the best solution, so if you have a better idea, please rea
 
 **Note: Do not rush to submit your solution to LeetCode, just to test out whether it works or not. If it doesn't, it count against your over all submit/passing ratio. Is it bad? I don't know. But I don't like to see my raito being lowered.**
 
-___
+---
 
 ## Algorithms
 
 1. [Two Pointers Technique](algorithms/1_two_pointers/1_two_pointers.md)
     - This collection will have 7 challenges.
 
-___
+---
 
 ## Data Structure

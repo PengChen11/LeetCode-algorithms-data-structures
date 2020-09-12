@@ -16,9 +16,13 @@ You can also extend this idea to use multiple pointers.
 
 - [Challenge 4, Valid Palindrome II](#Challenge-4)
 
+- [Challenge 5, Merge Sorted Array](#Challenge-5)
+
+- [Challenge 6, Linked List Cycle](#Challenge-6)
+
 **Today's challenge:**
 
-- [Challenge 5, Merge Sorted Array](#Challenge-5)
+- [Challenge 7, Longest word in dict through deleting](#Challenge-7)
 
 ___
 
@@ -176,6 +180,8 @@ Try come up with a solution before see my sample solution. And test it with the 
 
 [Click here to see JS tester](3_reverse_vowels/reverse_vowels.test.js)
 
+___
+
 <details>
   <summary>Click here to see a solution using pointers.</summary>
 
@@ -239,6 +245,8 @@ remove one charactor from the left part vs right part might be tricky.
 Try come up with a solution before see my sample solution. And test it with the provided tester.
 
 [Click here to see JS tester](3_reverse_vowels/reverse_vowels.test.js)
+
+___
 
 <details>
   <summary>Click here to see solutions using two pointers.</summary>
@@ -322,3 +330,104 @@ Example:
 nums1.length == m + n
 
 nums2.length == n
+
+**Hint:**
+
+- It does not asking anything in return. Just modify nums1 in place.
+- Think about the edge cases. Check them in the tester.
+
+A lot of people doesn't like this challenge casue it is not saying that no return is needed.
+
+**Tester:**
+
+Try come up with a solution before see my sample solution. And test it with the provided tester.
+[Click here to see the JS tester](5_merge_sorted_array/mergeSortedArray.test.js)
+
+___
+
+<details>
+  <summary>Click here to see solutions using two pointers.</summary>
+
+  This is a relativelly easy challenge. The key to solve it is to update the element of nums1 from tail to head.
+
+  1. define your two pointers
+  2. make a for loop, loop the length of nums1 times.
+  3. each time from tail to head, modify the elements inside nums1.
+
+</details>
+
+___
+
+[Click here to see the solution in JS](5_merge_sorted_array/mergeSortedArray.js)
+
+[Click here to see the solution in Python](5_merge_sorted_array/mergeSortedArray.py)
+
+___
+
+## Challenge 6
+
+[LeetCode challenge 141. Linked List Cycle (easy)](https://leetcode.com/problems/linked-list-cycle/)
+
+See requirements details from the above link.
+
+Hint: Don't get confused by the pos. Focus on two pointers, if they travals in different speed, what will happen if a linked list has a loop.
+
+**Tester:**
+
+Try come up with a solution before see my sample solution. And test it with the provided tester.
+[Click here to see the JS tester](6_linked_list_cycle/linked_list_cycle.test.js)
+
+___
+
+<details>
+  <summary>Click here to see solutions using two pointers.</summary>
+
+  Use two pinters, one moves one step at a time, the other one moves two steps at a time, if the linked list has a loop, those two pointers will meet at some point.
+
+  1. make two pointers, one pointing to the head, one pointing to head.next
+
+  2. move 1st pointer one step, 2nd pointer two steps in a while loop, while 1st pointer, 2nd pointer and 2nd pointer does have a next(or you'll get an error saying "null does have a property next).
+
+  3. if pointer1's value match pointer2's value, they return True. (this breaks the loop)
+
+  4. return Flase by default.
+
+</details>
+
+___
+
+[Click here to see the code in JS](6_linked_list_cycle/linked_list_cycle.js)
+
+[Click here to see the code in Python](6_linked_list_cycle/linked_list.py)
+
+___
+
+## Challenge 7
+
+[Leet Code 524. Longest Word in Dictionary through Deleting](https://leetcode.com/problems/longest-word-in-dictionary-through-deleting/)
+
+Given a string and a string dictionary, find the longest string in the dictionary that can be formed by deleting some characters of the given string. If there are more than one possible results, return the longest word with the smallest lexicographical order. If there is no possible result, return the empty string.
+
+**Example 1:**
+
+- Input:
+- s = "abpcplea", d = ["ale","apple","monkey","plea"]
+
+- Output:
+- "apple"
+
+**Example 2:**
+
+- Input:
+- s = "abpcplea", d = ["a","b","c"]
+
+- Output:
+- "a"
+
+**Note:**
+
+- All the strings in the input will only contain lower-case letters.
+- The size of the dictionary won't exceed 1,000.
+- The length of all the strings in the input won't exceed 1,000.
+
+
