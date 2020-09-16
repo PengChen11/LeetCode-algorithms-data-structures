@@ -20,8 +20,6 @@ You can also extend this idea to use multiple pointers.
 
 - [Challenge 6, Linked List Cycle](#Challenge-6)
 
-**Today's challenge:**
-
 - [Challenge 7, Longest word in dict through deleting](#Challenge-7)
 
 ___

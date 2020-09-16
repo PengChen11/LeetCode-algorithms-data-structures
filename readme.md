@@ -2,9 +2,9 @@
 
 **update:**
 
-Most recent solutions: [Algorithms catagorize 1, challenge 6.](algorithms/1_two_pointers/1_two_pointers.md)
+Most recent solutions: [Algorithms, Two Pointers Technique, challenge 7.](algorithms/1_two_pointers/1_two_pointers.md)
 
-Today's challenges: [Algorithms catagorize 1, challenge 7.](algorithms/1_two_pointers/1_two_pointers.md)
+Today's challenges: [Data Structure, Linked List, challenge 1.](data_structure/1_linked_list/linked_list.md)
 
 ---
 
@@ -38,3 +38,6 @@ My solution won't be the best solution, so if you have a better idea, please rea
 ---
 
 ## Data Structure
+
+1. [Linked List](data_structure/1_linked_list/linked_list.md)
+    - This collection will have 10 challenges.
