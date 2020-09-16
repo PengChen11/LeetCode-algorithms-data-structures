@@ -430,4 +430,45 @@ Given a string and a string dictionary, find the longest string in the dictionar
 - The size of the dictionary won't exceed 1,000.
 - The length of all the strings in the input won't exceed 1,000.
 
+**Tester:**
 
+Try come up with a solution before see my sample solution. And test it with the provided tester.
+
+[Click here to see the JS tester](7_longest_word_in_dict/findLongestWord.test.js)
+
+___
+
+<details>
+  <summary>Click here to see solutions using two pointers.</summary>
+
+  We need to check the string s with every word inside of d to determine whether we can delete some letters of s to make it match any word in d or not, if multiple matches are found, then return the longest one with the smallest lexicographical order. Thus a loop will be needed.
+
+  Here we need an insider function, to simply check whether the string could be matching the word in d if we delete some letters. This function will simply return yes or no.
+
+  1. we will need two pointers, one for string (let's call it i ), one for the word in d (let's call it j ). They will both be init with 0.
+
+  2. the loop will keep going as long as BOTH i and j are not at the end of either the string or the word.
+
+  3. while the loop goes, we will check one thing: if the character at i index of s matches the character at j index of the word.  If it matches, then increase j. Otherwise, increase i.
+
+  4. in the end, return whether j matches the length of word. if matches, means all letters in the word could be found in the given string.
+
+  The logic of main function will be simple:
+
+  1. figure out a way to store the longest word, then return it in the end.
+
+  2. we need a loop to compare every word in d with s.
+
+  3. if the length of the stored longest word is greater than the word in d, skip it.
+
+  4. if length are the same, then do lexicographical comparison.
+
+  5. else, use our insider string checker function to check the match. if matches, then update the longest word with this word.
+
+</details>
+
+___
+
+[Click here to see the code in JS](7_longest_word_in_dict/findLongestWord.js)
+
+[Click here to see the code in Python](7_longest_word_in_dict/findLongestWord.py)
