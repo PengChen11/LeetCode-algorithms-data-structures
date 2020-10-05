@@ -53,8 +53,6 @@ function validPalindrome(inputStr){
   return true;
 }
 
-module.exports = validPalindrome2;
-
 
 // here's my new way of solving this problem without using function inside of a function, but a nested while loop.
 
@@ -83,3 +81,5 @@ function validPalindrome3(inputStr){
   }
   return true;
 }
+
+module.exports = {validPalindrome, validPalindrome2, validPalindrome3};

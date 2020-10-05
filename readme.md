@@ -2,9 +2,9 @@
 
 **update:**
 
-Most recent solutions: [Algorithms, Two Pointers Technique, challenge 7.](algorithms/1_two_pointers/1_two_pointers.md)
+Most recent solutions: [Data Structure, Linked List, challenge 2.](data_structure/1_linked_list/linked_list.md)
 
-Today's challenges: [Data Structure, Linked List, challenge 1.](data_structure/1_linked_list/linked_list.md)
+Today's challenges: [Data Structure, Linked List, challenge 3.](data_structure/1_linked_list/linked_list.md)
 
 ---
 
