@@ -154,3 +154,14 @@ Example 3:
 Input: l1 = [], l2 = [0]
 Output: [0]
 ```
+
+Constraints:
+
+The number of nodes in both lists is in the range [0, 50].
+-100 <= Node.val <= 100
+Both l1 and l2 are sorted in non-decreasing order.
+
+**Try:**
+Can we use recursion to shorten our code?
+
+
