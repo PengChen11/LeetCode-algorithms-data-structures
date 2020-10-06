@@ -192,8 +192,8 @@ Can we use recursion to shorten our code?
       1. make a new node(we call dummy here), initialize it with anything you want. In my code, I used 0.
       2. make a tail pointer, pointing to this new node.
       3. do simple "if statement" in a while loop, while both node1 and node2 can NOT be null at the same time.(or always true, whatever you prefer)
-          1. if node1 is null, tail.next is node2.
-          2. if node2 is null, tail.next is node1.
+          1. if node1 is null, tail.next is node2, then break;
+          2. if node2 is null, tail.next is node1, then break;
           3. if node1 has a smaller value than node2, tail.next will be node1. Then move node1 to node1.next.
           4. if node2 has a smaller value than node1, tail.next will be node2. Then move node2 to node2.next.
           5. Don't forget to move tail to tail.next
