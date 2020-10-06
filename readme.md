@@ -2,9 +2,9 @@
 
 **update:**
 
-Most recent solutions: [Data Structure, Linked List, challenge 2.](data_structure/1_linked_list/linked_list.md)
+Most recent solutions: [Data Structure, Linked List, challenge 3.](data_structure/1_linked_list/linked_list.md)
 
-Today's challenges: [Data Structure, Linked List, challenge 3.](data_structure/1_linked_list/linked_list.md)
+Today's challenges: [Data Structure, Linked List, challenge 4.](data_structure/1_linked_list/linked_list.md)
 
 ---
 

@@ -8,9 +8,11 @@ Linked List is one of the basic data structure. You can find more linked list co
 
 2. [Challenge 2, Reverse Linked List (Easy)](#challenge-2)
 
+3. [Challege 3, Merge Two Sorted Lists (Easy)](#challenge-3)
+
 ## Today's challenge
 
-3. [Challege 3, Merge Two Sorted Lists (Easy)](#challenge-3)
+4. [Challege 4, Merge Two Sorted Lists (Easy)](#challenge-4)
 
 ___
 
@@ -164,4 +166,67 @@ Both l1 and l2 are sorted in non-decreasing order.
 **Try:**
 Can we use recursion to shorten our code?
 
+> [Click here to see JS tester](3_merge_LL/merge_LL.test.js)
 
+<br/>
+
+<details>
+  <summary>Click here to see a solution using both recursive and iterative solution.</summary>
+  <br/>
+
+      The recursive solution will be really easy to understand:
+
+      1. The function will take two nodes as args
+      2. if any one of those two nodes becomes null, then return the other one. eg. node1 is null, return node2, vice versa.
+      3. if node1 value is smaller than node2, then node1.next will be calling the function again, with two new args, node1.next and node2.
+      4. return node1 if step 3 happened. we will always return the smaller node.
+      5. if node2 value is smaller than node1, then node2.next will be calling the function again, with two new args, node1 and node2.next.
+      6. return node2 if step 3 happened. we will always return the smaller node.
+
+      that's it.
+
+      The iterative solution will be a bit more complex.
+      DO NOT dive into nested "if conditions" for this solution. You will get lost there.
+
+      Here's a simpler solution:
+      1. make a new node(we call dummy here), initialize it with anything you want. In my code, I used 0.
+      2. make a tail pointer, pointing to this new node.
+      3. do simple "if statement" in a while loop, while both node1 and node2 can NOT be null at the same time.(or always true, whatever you prefer)
+          1. if node1 is null, tail.next is node2.
+          2. if node2 is null, tail.next is node1.
+          3. if node1 has a smaller value than node2, tail.next will be node1. Then move node1 to node1.next.
+          4. if node2 has a smaller value than node1, tail.next will be node2. Then move node2 to node2.next.
+          5. Don't forget to move tail to tail.next
+      4. return dummy.next, which points to the new starting node of the merged linked list.
+</details>
+
+<br/>
+
+> [Click here to see the code in JS](3_merge_LL/merge_LL.js)
+
+> [Click here to see the code in Python](3_merge_LL/merge_LL.py)
+
+___
+
+<br/>
+<br/>
+
+## Challenge 4
+
+[LeetCode challenge 83, Remove Duplicates from Sorted List (Easy)](https://leetcode.com/problems/remove-duplicates-from-sorted-list/)
+
+Given a sorted linked list, delete all duplicates such that each element appear only once.
+
+Example 1:
+
+```
+Input: 1->1->2
+Output: 1->2
+```
+
+Example 2:
+
+```
+Input: 1->1->2->3->3
+Output: 1->2->3
+```
