@@ -24,9 +24,12 @@ You can also extend this idea to use multiple pointers.
 
 ___
 
+<br/>
+<br/>
+
 ## Challenge 1
 
-### LeetCode 167. Two Sum II - Input array [easy]
+[LeetCode 167. Two Sum II - Input array (easy)](https://leetcode.com/problems/two-sum-ii-input-array-is-sorted/)
 
 Intro:
 
@@ -57,6 +60,8 @@ Try come up with a solution before see my sample solution. And test it with the 
 
 ___
 
+<br/>
+
 <details>
   <summary>Click here to see a solution using pointers.</summary>
 
@@ -75,6 +80,8 @@ With this algorithm, we only touch each element inside the array one time. Thus 
 ![img](https://camo.githubusercontent.com/98b3f53b56644b038cddd17fb1f6b4d5d1546989/68747470733a2f2f63732d6e6f7465732d313235363130393739362e636f732e61702d6775616e677a686f752e6d7971636c6f75642e636f6d2f34333763623534632d353937302d346261392d623265662d3235343166376436633831652e676966)
 </details>
 
+<br/>
+
 ___
 
 [Click here to see JS file](1_two_sum/two_sum.js)
@@ -83,9 +90,12 @@ ___
 
 ___
 
+<br/>
+<br/>
+
 ## Challenge 2
 
-### LeetCode 633. Sum of Square Numbers [Easy]
+[LeetCode 633. Sum of Square Numbers (Easy)(https://leetcode.com/problems/sum-of-square-numbers/)
 
 **Intro:**
 
@@ -119,6 +129,8 @@ Try come up with a solution before see my sample solution. And test it with the 
 
 ___
 
+<br/>
+
 <details>
   <summary>Click here to see a solution using pointers.</summary>
 
@@ -139,6 +151,8 @@ ___
 
 </details>
 
+<br/>
+
 ___
 
 [Click here to see the code in JS](2_sum_square_numbers/sum_square.js)
@@ -147,9 +161,12 @@ ___
 
 ___
 
+<br/>
+<br/>
+
 ## Challenge 3
 
-### LeetCode 345. Reverse Vowels of a String (Easy)
+[LeetCode 345. Reverse Vowels of a String (Easy)](https://leetcode.com/problems/reverse-vowels-of-a-string/)
 
 **Intro:**
 
@@ -180,6 +197,8 @@ Try come up with a solution before see my sample solution. And test it with the 
 
 ___
 
+<br/>
+
 <details>
   <summary>Click here to see a solution using pointers.</summary>
 
@@ -204,6 +223,8 @@ ___
   ![img](https://camo.githubusercontent.com/6e66ca91f2688beacd6f9dd3ef2774abb53dda73/68747470733a2f2f63732d6e6f7465732d313235363130393739362e636f732e61702d6775616e677a686f752e6d7971636c6f75642e636f6d2f65663235666637632d306636332d343230642d386233302d6561666265656133356431312e676966)
 </details>
 
+<br/>
+
 ___
 
 [Click here to see the code in JS](3_reverse_vowels/reverse_vowels.js)
@@ -212,9 +233,12 @@ ___
 
 ___
 
+<br/>
+<br/>
+
 ## Challenge 4
 
-### LeetCode 680. Valid Palindrome II (Easy)
+[LeetCode 680. Valid Palindrome II (Easy)](https://leetcode.com/problems/valid-palindrome-ii/)
 
 **Intro:**
 
@@ -245,6 +269,8 @@ Try come up with a solution before see my sample solution. And test it with the 
 [Click here to see JS tester](3_reverse_vowels/reverse_vowels.test.js)
 
 ___
+
+<br/>
 
 <details>
   <summary>Click here to see solutions using two pointers.</summary>
@@ -291,6 +317,8 @@ ___
 
 </details>
 
+<br/>
+
 ___
 
 [Click here to see the solution in JS](4_valid_palindrome/valid_palindrome.js)
@@ -299,9 +327,12 @@ ___
 
 ___
 
+<br/>
+<br/>
+
 ## Challenge 5
 
-### LeetCode challenge 88, Merge Sorted Array (easy)
+[LeetCode challenge 88, Merge Sorted Array (easy)](https://leetcode.com/problems/merge-sorted-array/)
 
 **intro:**
 
@@ -343,6 +374,8 @@ Try come up with a solution before see my sample solution. And test it with the 
 
 ___
 
+<br/>
+
 <details>
   <summary>Click here to see solutions using two pointers.</summary>
 
@@ -354,6 +387,8 @@ ___
 
 </details>
 
+<br/>
+
 ___
 
 [Click here to see the solution in JS](5_merge_sorted_array/mergeSortedArray.js)
@@ -361,6 +396,9 @@ ___
 [Click here to see the solution in Python](5_merge_sorted_array/mergeSortedArray.py)
 
 ___
+
+<br/>
+<br/>
 
 ## Challenge 6
 
@@ -377,6 +415,8 @@ Try come up with a solution before see my sample solution. And test it with the 
 
 ___
 
+<br/>
+
 <details>
   <summary>Click here to see solutions using two pointers.</summary>
 
@@ -392,6 +432,8 @@ ___
 
 </details>
 
+<br/>
+
 ___
 
 [Click here to see the code in JS](6_linked_list_cycle/linked_list_cycle.js)
@@ -399,6 +441,9 @@ ___
 [Click here to see the code in Python](6_linked_list_cycle/linked_list.py)
 
 ___
+
+<br/>
+<br/>
 
 ## Challenge 7
 
@@ -436,6 +481,8 @@ Try come up with a solution before see my sample solution. And test it with the 
 
 ___
 
+<br/>
+
 <details>
   <summary>Click here to see solutions using two pointers.</summary>
 
@@ -464,6 +511,8 @@ ___
   5. else, use our insider string checker function to check the match. if matches, then update the longest word with this word.
 
 </details>
+
+<br/>
 
 ___
 

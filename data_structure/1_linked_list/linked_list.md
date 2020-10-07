@@ -16,9 +16,11 @@ Linked List is one of the basic data structure. You can find more linked list co
 
 [Challenge 6, Swap Nodes in Pairs (Medium)](#challenge-6)
 
+[Challenge 7, Add Two Numbers II (Medium)](#challenge-7)
+
 ## Today's challenge
 
-[Challenge 7, Add Two Numbers II (Medium)](#challenge-7)
+[Challenge 8, Split Linked List in parts (Medium)](#challenge-8)
 
 ___
 
@@ -318,7 +320,7 @@ Output: [1]
 <br/>
 
 <details>
-  <summary>Click here to see a solution using both recursive and iterative solution.</summary>
+  <summary>Click here to see a solution</summary>
   <br/>
 
       This challenge is very similer to a Code Fellows challenge. You can click the following link for reference about how to use two pointer technique to find the Nth node from the rear. Please scroll all the way to the bottom of that page.
@@ -393,7 +395,7 @@ The number of nodes in the list is in the range [0, 100].
 <br/>
 
 <details>
-  <summary>Click here to see a solution using both recursive and iterative solution.</summary>
+  <summary>Click here to see a solution</summary>
   <br/>
 
       Let's divide the bigger problem into smaller problems:
@@ -460,3 +462,92 @@ Issues:
 **Hint:**
 
 Maybe use stack or queue to help us?
+
+<br/>
+
+> [Click here to see JS tester](7_add_two_numbers/add_two_numbers.test.js)
+
+<br/>
+
+<details>
+  <summary>Click here to see a solution</summary>
+  <br/>
+
+      Let's divide the bigger problem into smaller problems:
+      Science I can NOT modify the original linked list, thus I'll need something with last-in-first-out way to handle data.
+
+      A Stack is a good option. If you don't know how to build a simply Stack, do some google research or refer to this link:
+[link to how to build stacks and queues](https://codefellows.github.io/common_curriculum/data_structures_and_algorithms/Code_401/class-10/resources/stacks_and_queues.html)
+
+      Or, you can use the build-in array ( in Python, I use List. it works great).
+
+      1. I need a function to loop through the linked list and push its value into a stack.
+          1. this function will build a Stack (or array, list in Python)
+          2. this function will push every node value into that Stack
+          3. this function will return the Stack we've built.
+
+      2. Then I'll need to function to handle the main logic:
+          1. initialize a new Linked List with a dummy head.
+          2. initialize the carry with 0 ( 3+8 = 11, so we record 1, carry 1).
+          3. Start a while loop, keep going until: both stacks are empty, and carry is 0.
+             1. 'x' will be the value from stack 1, it is either 0 (if stack 1 is empty), or the value we poped from stack1.
+             2. 'y' will be the value from stack 2, it is either 0 (if stack 2 is empty), or the value we poped from stack1.
+             3. sum will be x + y + carry
+             4. build a new node, with digit sum%10. we don't care whether the sum is greater than 10 or not at here.
+             5. insert this new node after the dummyHead. (don't forget to link it's next)
+             6.  update carry with (sum//10). This is a floor division, if your language doesn't support floor division, then do Math.floor(sum/10). This will be either 1 or 0.
+
+      3. In the end, return dummyHead.next.
+
+</details>
+
+<br/>
+
+> [Click here to see the code in JS](7_add_two_numbers/add_two_numbers.js)
+
+> [Click here to see the code in Python](7_add_two_numbers/add_two_numbers.py)
+
+___
+
+<br/>
+<br/>
+
+## Challenge 8
+
+[Leet Code Challenge 725. Split Linked List in Parts (Medium)](https://leetcode.com/problems/split-linked-list-in-parts/description/)
+
+Given a (singly) linked list with head node root, write a function to split the linked list into k consecutive linked list "parts".
+
+The length of each part should be as equal as possible: no two parts should have a size differing by more than 1. This may lead to some parts being null.
+
+The parts should be in order of occurrence in the input list, and parts occurring earlier should always have a size greater than or equal parts occurring later.
+
+Return a List of ListNode's representing the linked list parts that are formed.
+
+Examples 1->2->3->4, k = 5 // 5 equal parts [ [1], [2], [3], [4], null ]
+
+**Example 1:**
+
+```
+Input:  root = [1, 2, 3], k = 5
+Output: [[1],[2],[3],[],[]]
+```
+
+Explanation: The input and each element of the output are ListNodes, not arrays. For example, the input root has root.val = 1, root.next.val = 2, \root.next.next.val = 3, and root.next.next.next = null. The first element output[0] has output[0].val = 1, output[0].next = null. The last element output[4] is null, but it's string representation as a ListNode is [].
+
+**Example 2:**
+
+```
+Input:
+root = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10], k = 3
+Output: [[1, 2, 3, 4], [5, 6, 7], [8, 9, 10]]
+```
+
+Explanation:
+The input has been split into consecutive parts with size difference at most 1, and earlier parts are a larger size than the later parts.
+
+**Note:**
+
+The length of root will be in the range [0, 1000].
+Each value of a node in the input will be an integer in the range [0, 999].
+k will be an integer in the range [1, 50].

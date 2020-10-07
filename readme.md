@@ -2,9 +2,9 @@
 
 **update:**
 
-Most recent solutions: [Data Structure, Linked List, challenge 6.](data_structure/1_linked_list/linked_list.md)
+Most recent solutions: [Data Structure, Linked List, challenge 7.](data_structure/1_linked_list/linked_list.md)
 
-Today's challenges: [Data Structure, Linked List, challenge 7.](data_structure/1_linked_list/linked_list.md)
+Today's challenges: [Data Structure, Linked List, challenge 8.](data_structure/1_linked_list/linked_list.md)
 
 ---
 
@@ -42,4 +42,4 @@ My solution won't be the best solution, so if you have a better idea, please rea
 ## Data Structure
 
 1. [Linked List](data_structure/1_linked_list/linked_list.md)
-    - This collection will have 10 challenges.
+    - This collection will have 9 challenges.
