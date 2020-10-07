@@ -439,5 +439,20 @@ What if you cannot modify the input lists? In other words, reversing the lists i
 ```
 Input: (7 -> 2 -> 4 -> 3) + (5 -> 6 -> 4)
 Output: 7 -> 8 -> 0 -> 7
+
+confusing? 7243 + 564 = 7807 :)
 ```
 
+**What will not work:**
+
+Here's what I've tried and it's being proved not work:
+
+1. convert each linked list to a number string.
+2. convert number string to numbers, then add them together.
+3. figure out a way to create a linked list based on the result from step 2.
+
+Issues:
+
+1. When the number is too large, JS will start to use Scientific way to write numbers, like 2.12312431255e+60. Thus, when the linked list is too long, it won't work.
+2. I tried to use Number.toFixed method, but it only support precision of 20. Which is not enough too.
+3. So I guess there's no easy way, we will have to do something directly with the nodes.
