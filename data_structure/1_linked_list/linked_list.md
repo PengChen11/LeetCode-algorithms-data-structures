@@ -456,3 +456,7 @@ Issues:
 1. When the number is too large, JS will start to use Scientific way to write numbers, like 2.12312431255e+60. Thus, when the linked list is too long, it won't work.
 2. I tried to use Number.toFixed method, but it only support precision of 20. Which is not enough too.
 3. So I guess there's no easy way, we will have to do something directly with the nodes.
+
+**Hint:**
+
+Maybe use stack or queue to help us?
