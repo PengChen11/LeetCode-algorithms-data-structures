@@ -2,17 +2,17 @@
 
 **update:**
 
-Most recent solutions: [Data Structure, Linked List, challenge 3.](data_structure/1_linked_list/linked_list.md)
+Most recent solutions: [Data Structure, Linked List, challenge 6.](data_structure/1_linked_list/linked_list.md)
 
-Today's challenges: [Data Structure, Linked List, challenge 4.](data_structure/1_linked_list/linked_list.md)
+Today's challenges: [Data Structure, Linked List, challenge 7.](data_structure/1_linked_list/linked_list.md)
 
 ---
 
 One thing I've learned as a newcomer to the programmer's world is that, if you really want to be a great software engineer, a solid understanding of different algorithms and data structures is a must. Thus LeetCode **medium to hard** level code challenge is sometime required by employers.
 
-But, there're over 1500 challenges on LeetCode, where should I get start with? what should I focus on?
+But, there're over 1500 challenges on LeetCode website, where should I get start with? what should I focus on?
 
-So I started browsing over GitHub trying to find some LeetCode notes, categorize different kind of challenges to help me. Then I found this awesome one.
+So I started searching over GitHub trying to find some LeetCode notes, categorize different kind of challenges to help me. Then I found this awesome one.
 
 The author picked up around 200 classic LeetCode challenges, categorized them, and explained some of the solution in detail.
 

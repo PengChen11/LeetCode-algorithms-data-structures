@@ -4,15 +4,21 @@ Linked List is one of the basic data structure. You can find more linked list co
 
 ## Resolved
 
-1. [Challenge 1, Intersection of Two Linked Lists (easy)](#challenge-1)
+[Challenge 1, Intersection of Two Linked Lists (easy)](#challenge-1)
 
-2. [Challenge 2, Reverse Linked List (Easy)](#challenge-2)
+[Challenge 2, Reverse Linked List (Easy)](#challenge-2)
 
-3. [Challege 3, Merge Two Sorted Lists (Easy)](#challenge-3)
+[Challenge 3, Merge Two Sorted Lists (Easy)](#challenge-3)
+
+[Challenge 4, Merge Two Sorted Lists (Easy)](#challenge-4)
+
+[Challenge 5, Remove Nth Node From End of List (Medium)](#challenge-5)
+
+[Challenge 6, Swap Nodes in Pairs (Medium)](#challenge-6)
 
 ## Today's challenge
 
-4. [Challege 4, Merge Two Sorted Lists (Easy)](#challenge-4)
+[Challenge 7, Add Two Numbers II (Medium)](#challenge-7)
 
 ___
 
@@ -230,3 +236,208 @@ Example 2:
 Input: 1->1->2->3->3
 Output: 1->2->3
 ```
+
+<br/>
+
+> [Click here to see JS tester](3_merge_LL/merge_LL.test.js)
+
+<br/>
+
+<details>
+  <summary>Click here to see a solution using both recursive and iterative solution.</summary>
+  <br/>
+
+      The recursive solution will be a bit challenging to understand:
+
+      1. First, we need to determine the exit condition, which is when we reach the last node in the linked list, we will exit the recursion.
+       - if the head or head.next is null, return head;
+      2. The next node of the given node (node passed as args), is determined by calling this function again while passing the given node's next node as a parameter.
+      3. at the end of each function, we return one thing, based on an if condition:
+          1. if the given node's value is the same as it's next node, then return the next node. ( notice here, the given's node's next node is already modified by step 2.)
+          2. If not the same, then return the given node.
+
+      The iterative solution is really easy to understand:
+
+      1. First, we build up a new dummy node, just like challenge 3.
+      2. we point the tail to the dummy node
+      3. we will need a while loop, loop through every node in the linked list. We call the node we're currently checking as "current node". The loop keeps going until the current node is null.
+          1. if the current node's value is not the same, comparing to the "tail"'s value(we need to make sure to initialize the dummy node with a unique value), we set tail.next to the current node.
+          2. then we set the new tail to the current node.
+          3. outside of the if condition, we iterate the current node. set current = current.next
+      4. Outside of the while loop, the "tail" will have a next, pointing to the original node, which might not be what we want. (duplicate may occur). Thus we will manually point this tail.next to null.
+      5. In the end, return dummy.next
+
+</details>
+
+<br/>
+
+> [Click here to see the code in JS](4_remove_duplicate/remove_duplicate.js)
+
+> [Click here to see the code in Python](4_remove_duplicate/remove_duplicate.py)
+
+___
+
+<br/>
+<br/>
+
+## Challenge 5
+
+[LeetCode Challenge 19. Remove Nth Node From End of List (Medium)](https://leetcode.com/problems/remove-nth-node-from-end-of-list/description/)
+
+Given the head of a linked list, remove the nth node from the end of the list and return its head.
+
+Follow up: Could you do this in one pass?
+
+Example 1:
+
+![img](https://assets.leetcode.com/uploads/2020/10/03/remove_ex1.jpg)
+
+```
+Input: head = [1,2,3,4,5], n = 2
+Output: [1,2,3,5]
+```
+
+Example 2:
+
+```
+Input: head = [1], n = 1
+Output: []
+```
+
+Example 3:
+
+```
+Input: head = [1,2], n = 1
+Output: [1]
+```
+
+<br/>
+
+> [Click here to see JS tester](3_merge_LL/merge_LL.test.js)
+
+<br/>
+
+<details>
+  <summary>Click here to see a solution using both recursive and iterative solution.</summary>
+  <br/>
+
+      This challenge is very similer to a Code Fellows challenge. You can click the following link for reference about how to use two pointer technique to find the Nth node from the rear. Please scroll all the way to the bottom of that page.
+
+  [Click here to refer to my code fellow challenge for answers using two pointers solution](https://github.com/PengChen11/data-structures-and-algorithms/blob/master/401-challenges/data_structures/linkedList/readme.md)
+
+      Let's assume that you've figured out how to use the two-pointer technique to figure out the Nth node from the rear:
+
+      Next:
+
+      1. Since we're removing the Nth node, so the Node we need to find is not the one on N-th position, it is the one before it.
+          1. We can use an insider function to do the job. Refer to code fellows challenge to figure out the steps.
+          2. But what if the n is equal to the length of the linked list? In this case, step 1 will fail. Cause the node we will delete is the head node, and there's nothing before it. We will need to take care of that part.
+          3. In my sample, if the pointer moves n steps and reaches the end, then I'll return null, so that I know we're deleting the head (cause there's nothing in front of the head).
+
+      2. figure out a way to delete the Nth Node. You can simply create a function to relink the Node before it to the Node next to it.
+
+      3. if we got null returned from step 1, sub-step 3, then we will simply return the head.next; if not, run step 2.
+</details>
+
+<br/>
+
+> [Click here to see the code in JS](5_remove_nth/remove_nth.js)
+
+> [Click here to see the code in Python](5_remove_nth/remove_nth.py)
+
+___
+
+<br/>
+<br/>
+
+## Challenge 6
+
+[Leed Code challenge 24. Swap Nodes in Pairs (Medium)](https://leetcode.com/problems/swap-nodes-in-pairs/description/)
+
+Given a linked list, swap every two adjacent nodes and return its head.
+
+You may not modify the values in the list's nodes. Only nodes itself may be changed.
+
+**Example 1:**
+
+![img](https://assets.leetcode.com/uploads/2020/10/03/swap_ex1.jpg)
+```
+Input: head = [1,2,3,4]
+Output: [2,1,4,3]
+```
+
+**Example 2:**
+
+```
+Input: head = []
+Output: []
+```
+
+**Example 3:**
+
+```
+Input: head = [1]
+Output: [1]
+```
+
+**Constraints:**
+
+The number of nodes in the list is in the range [0, 100].
+
+0 <= Node.val <= 100
+
+<br/>
+
+> [Click here to see JS tester](6_swap_nodes/swap_nodes.test.js)
+
+<br/>
+
+<details>
+  <summary>Click here to see a solution using both recursive and iterative solution.</summary>
+  <br/>
+
+      Let's divide the bigger problem into smaller problems:
+
+      1. We need a logic to traverse inside of the linked list, touch every node.
+          1. when moving forward, we want all the nodes on the Odd index (if it starts with 1) to switch with the node after it;
+          2. We need the node on the EVEN index (if it starts with 1) to be stored somewhere, so later on, after we swapped the two nodes after this one, we can re-link it's next to the proper node.
+          3. this logic will handle the edge cases, take care of null conditions.
+          4. In the end, this logic will return the new head.
+
+      2. We will need an inner helper function, to swap the given two nodes, when called by step 1, sub-step 2.
+          1. this function will check whether the node exists in step 1, sub-step 2. If it does, link it to the proper node.
+          2. this function will simply swap two given nodes as args.
+
+      Alright, that's it. have fun.
+
+</details>
+
+<br/>
+
+> [Click here to see the code in JS](6_swap_nodes/swap_nodes.js)
+
+> [Click here to see the code in Python](6_swap_nodes/swap_nodes.py)
+
+___
+
+<br/>
+<br/>
+
+## Challenge 7
+
+[Leet Code challenge 445. Add Two Numbers II (Medium)](https://leetcode.com/problems/add-two-numbers-ii/description/)
+
+You are given two **non-empty** linked lists representing two non-negative integers. The most significant digit comes first and each of their nodes contain a single digit. Add the two numbers and return it as a linked list.
+
+You may assume the two numbers do not contain any leading zero, except the number 0 itself.
+
+**Follow up:**
+What if you cannot modify the input lists? In other words, reversing the lists is not allowed.
+
+**Example:**
+
+```
+Input: (7 -> 2 -> 4 -> 3) + (5 -> 6 -> 4)
+Output: 7 -> 8 -> 0 -> 7
+```
+

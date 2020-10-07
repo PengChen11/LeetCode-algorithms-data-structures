@@ -1,7 +1,7 @@
 'use strict';
 class Node{
-  constructor(value, next=null){
-    this.value = value;
+  constructor(val, next=null){
+    this.val = val;
     this.next = next;
   }
 }
@@ -26,7 +26,7 @@ class LinkedList {
     let output = [];
     let current = this.head;
     while (current){
-      output.push(current.value);
+      output.push(current.val);
       current=current.next;
     }
     return output;

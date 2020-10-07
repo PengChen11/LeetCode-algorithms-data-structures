@@ -2,7 +2,7 @@
 const {Node, LinkedList} = require('../linked_list_creator');
 const { mergeTwoLists, mergeTwoLists_2} = require('./merge_LL');
 
-describe('tests for LeetCode challenge 21, merge two sorted linked list', ()=>{
+describe('4_merge_LL, tests for LeetCode challenge 21, merge two sorted linked list', ()=>{
 
   it('test for example 1', ()=>{
     let testList1 = new LinkedList();

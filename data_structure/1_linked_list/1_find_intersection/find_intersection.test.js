@@ -17,7 +17,7 @@ describe('LeetCode challenge 160 test', ()=>{
     listB.head.next.next.next = c1;
     expect(listA.showAsArray()).toStrictEqual(['a1','a2','c1','c2','c3']);
     expect(listB.showAsArray()).toStrictEqual(['b1','b2','b3','c1','c2','c3']);
-    expect(find_intersection(listA.head,listB.head).value).toBe('c1');
+    expect(find_intersection(listA.head,listB.head).val).toBe('c1');
   });
 
   it('testing without an intersection node', ()=>{
