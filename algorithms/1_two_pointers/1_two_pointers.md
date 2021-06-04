@@ -87,6 +87,8 @@ ___
 [Click here to see JS file](1_two_sum/two_sum.js)
 
 [Click here to see the python code](1_two_sum/two_sum.py)
+  
+[Click here to see Java file](1_two_sum/two_sum.java)
 
 ___
 
